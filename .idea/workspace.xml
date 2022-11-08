@@ -4,21 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff9bf8ec-83fd-4fbd-998c-ca4e581c0570" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/ConsumerFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/FraudDetectorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/KafkaDispatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/KafkaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/LogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/NewOrderMain.java" afterDir="false" />
+    <list default="true" id="ff9bf8ec-83fd-4fbd-998c-ca4e581c0570" name="Changes" comment="git refatorando serviços apache kafka">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-kafka/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/ecommerce/ConsumerFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/ecommerce/GsonDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/ecommerce/GsonSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-email/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-email/src/main/java/br/com/alura/ecommerce/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-fraud-detector/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-fraud-detector/src/main/java/br/com/alura/ecommerce/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-log/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-log/src/main/java/br/com/alura/ecommerce/LogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-new-order/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-new-order/src/main/java/br/com/alura/ecommerce/NewOrderMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-new-order/src/main/java/br/com/alura/ecommerce/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/ConsumerFunction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/FraudDetectorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-fraud-detector/src/main/java/br/com/alura/ecommerce/FraudDetectorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/KafkaDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/ecommerce/KafkaDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/KafkaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/ecommerce/KafkaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/LogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/NewOrderMain.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +51,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -50,22 +68,31 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/alexandrezanlorenzi/Desktop/Projects/Estudos/video3.1"
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "last_directory_selection": "C:/Users/alexandrezanlorenzi/Desktop/Projects/Estudos/aluraecommerce/ecommerce/common-kafka/src/main/java",
+    "last_opened_file_path": "C:/Users/alexandrezanlorenzi/Desktop/Projects/Estudos/video4.5/ecommerce",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.alura.ecommerce" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.alura.ecommerce" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="br.com.alura.ecommerce" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FraudDetectorService">
+  <component name="RunManager" selected="Application.NewOrderMain">
     <configuration name="EmailService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.EmailService" />
-      <module name="ecommerce" />
+      <module name="service-email" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="br.com.alura.ecommerce.*" />
@@ -91,7 +118,7 @@
     </configuration>
     <configuration name="FraudDetectorService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.FraudDetectorService" />
-      <module name="ecommerce" />
+      <module name="service-fraud-detector" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="br.com.alura.ecommerce.*" />
@@ -104,7 +131,7 @@
     </configuration>
     <configuration name="LogService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.LogService" />
-      <module name="ecommerce" />
+      <module name="service-log" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="br.com.alura.ecommerce.*" />
@@ -117,7 +144,7 @@
     </configuration>
     <configuration name="NewOrderMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.NewOrderMain" />
-      <module name="ecommerce" />
+      <module name="service-new-order" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="br.com.alura.ecommerce.*" />
@@ -129,7 +156,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.FraudDetectorService (1)" />
       <item itemvalue="Application.EmailService" />
       <item itemvalue="Application.FraudDetectorService" />
       <item itemvalue="Application.LogService" />
@@ -137,10 +163,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FraudDetectorService" />
         <item itemvalue="Application.NewOrderMain" />
-        <item itemvalue="Application.EmailService" />
         <item itemvalue="Application.LogService" />
+        <item itemvalue="Application.FraudDetectorService" />
+        <item itemvalue="Application.EmailService" />
       </list>
     </recent_temporary>
   </component>
@@ -152,8 +178,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667857478858</updated>
-      <workItem from="1667857480725" duration="12748000" />
+      <workItem from="1667857480725" duration="16849000" />
+      <workItem from="1667910157863" duration="4289000" />
     </task>
+    <task id="LOCAL-00001" summary="git refatorando serviços apache kafka">
+      <created>1667877910846</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667877910846</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,30 +205,8 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/EmailService.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/EmailService.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/KafkaService.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/alura/ecommerce/NewOrderMain.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="git refatorando serviços apache kafka" />
+    <option name="LAST_COMMIT_MESSAGE" value="git refatorando serviços apache kafka" />
   </component>
 </project>
