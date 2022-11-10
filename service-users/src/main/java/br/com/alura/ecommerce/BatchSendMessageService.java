@@ -1,5 +1,7 @@
 package br.com.alura.ecommerce;
 
+import br.com.alura.ecommerce.consumer.KafkaService;
+import br.com.alura.ecommerce.dispatcher.KafkaDispatcher;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
 import java.sql.Connection;
@@ -33,16 +35,14 @@ public class BatchSendMessageService {
         }
     }
 
-    private final KafkaDispatcher <User> userDispatcher = new KafkaDispatcher<>();
+    private final KafkaDispatcher<User> userDispatcher = new KafkaDispatcher<>();
 
-    private void parse(ConsumerRecord<String, Message<String>> consumerRecord) throws SQLException, ExecutionException, InterruptedException {
+    private void parse(ConsumerRecord<String, Message<String>> consumerRecord) throws SQLException {
         System.out.println("---------------------------------------------");
         System.out.println("Processing new batch");
 
         var message = consumerRecord.value();
         System.out.println("Topic " + message.payload());
-
-        if(true) throw new RuntimeException("deu um erro que eu forcei");
 
         for (User user : getAllUsers()) {
             userDispatcher.sendAsyc(message.payload(),
